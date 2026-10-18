@@ -1,0 +1,9 @@
+node_modules/
+dist/
+backup/
+*.log
+.cdp-cache/
+shot-*.png
+*.blockmap
+builder-debug.yml
+builder-effective-config.yaml

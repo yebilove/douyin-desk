@@ -1,0 +1,44 @@
+{
+  "name": "douyin-desk",
+  "version": "0.1.0",
+  "description": "自用抖音客户端：干净推荐流，无广告无带货",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "dist": "electron-builder --win dir",
+    "dist:setup": "electron-builder --win nsis"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "40.9.3",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.douyin.desk",
+    "productName": "抖音自用版",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "dir"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "抖音自用版"
+    },
+    "electronDownload": {
+      "mirror": "https://npmmirror.com/mirrors/electron/"
+    }
+  }
+}
